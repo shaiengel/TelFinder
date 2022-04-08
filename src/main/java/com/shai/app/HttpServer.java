@@ -16,7 +16,7 @@ public class HttpServer {
     CsvRead csvRead;
 
     @GetMapping(path = "/caller_id")
-    public ResponseEntity getTel(@RequestParam String phone_number){
+    synchronized public ResponseEntity getTel(@RequestParam String phone_number){
         System.out.println("/GET caller_id?phone_number=" + phone_number);
         ResponseEntity.BodyBuilder builder;
         JSONObject jsonName = new JSONObject();
@@ -44,7 +44,7 @@ public class HttpServer {
     }
 
     @PostMapping(path = "/remove")
-    public ResponseEntity remove(@RequestParam String phone_number){
+    synchronized public ResponseEntity remove(@RequestParam String phone_number){
         System.out.println("/POST remove?phone_number=" + phone_number);
         ResponseEntity.BodyBuilder builder;
         JSONObject jsonName = new JSONObject();

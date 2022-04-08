@@ -5,6 +5,6 @@ WORKDIR /app
 
 RUN mkdir -p /app/config
 COPY ./config/* /app/config/
-COPY TelFinder-1.0-SNAPSHOT.jar /app/
+COPY TelFinder-1.0-RELEASE.jar /app/
 
-CMD ["java", "-jar", "TelFinder-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "TelFinder-1.0-RELEASE.jar"]

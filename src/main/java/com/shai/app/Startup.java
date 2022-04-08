@@ -7,13 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication(scanBasePackages={"com.shai"})
-public class Starter {
+public class Startup {
 
     @Autowired
     ConfigurationReader config;
 
     public static void main(String[] args) {
-        SpringApplication.run(Starter.class, args);
+        SpringApplication.run(Startup.class, args);
     }
 
     @PostConstruct
